@@ -9,7 +9,26 @@
 </head>
 <body>
     <header></header> 
-    <section id="section1"></section>
+    <section id="section1">
+        <div id="filter-form-container">
+            <div id="filter-form-heading">Search</div>
+            <form action="" method="post" id="filter-form">
+                <div class="input-container">
+                    <div class="form-label">Mission</div>
+                    <input type="text" class="form-input" name="mission"  placeholder="Any specific mission...">
+                </div>
+                <div class="input-container">
+                    <div class="form-label">Rocket</div>
+                    <input type="text" class="form-input" name="rocket"  placeholder="Any specific rocket...">
+                </div>
+                <div class="input-container">
+                    <div class="form-label">Year</div>
+                    <input type="text" class="form-input" name="year" placeholder="Any specific year...">
+                </div>
+                <button type="submit" id="form-button">Filter</button>
+            </form>
+        </div>
+    </section>
     <section id="section2">
         <div id="launches-container">
             <% for(var i=0;i<launches.length;i++){ %>
