@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>spaceX launches</title>
+</head>
+<body>
+    <header></header> 
+    <section id="section1"></section>
+    <section id="section2">
+        <div id="launches-container">
+            <% for(var i=0;i<launches.length;i++){ %>
+                <div class="launch-container">
+                    <div class="about-launch">
+                        <div class="about-mission">
+                            <div class="mission-name"><%= launches[i].mission_name %></div>
+                            <div class="launch-date-time"><%= launches[i].launch_date_utc %></div>
+                            <div class="launch-location"><%= launches[i].launch_site.site_name_long %></div>
+                            <div class="mission-status">
+                                <% if(launches[i].launch_success){ %>
+                                    Mission succeeded 
+                                <% } %>
+                                <% if(launches[i].launch_failure_details){ %>
+                                    Failed( <%=  launches[i].launch_failure_details.reason %>) 
+                                <% } %>    
+                            </div>
+                        </div>
+                        <div class="about-rocket">
+                            <div class="rocket-name"><%= launches[i].rocket.rocket_name %> </div>
+                            <div class="rocket-type">(<%= launches[i].rocket.rocket_type %> )</div>
+                            <% if(launches[i].rocket.first_stage.cores[0].reused){ %>
+                                <div class="rocket-reused">Reused rocket</div>
+                            <% } %>  
+                            <% if(launches[i].rocket.first_stage.cores[0].land_success){ %>
+                                <div class="rocket-landed">First stage module landed</div>
+                            <% } %>  
+                        </div>
+                    </div>
+                    <% if(launches[i].details){ %>
+                        <div class="launch-details"><%= launches[i].details %></div>
+                    <% } %>  
+                    <div class="launch-externals">
+                        <% if(launches[i].links.article_link){ %>
+                            <div class="launch-links" onclick="location.href='<%= launches[i].links.article_link %> ';">Article</div>
+                        <% } %>  
+                        <% if(launches[i].links.wikipedia){ %>
+                            <div class="launch-links" onclick="location.href='<%= launches[i].links.wikipedia %> ';">Wikipedia</div>
+                        <% } %>
+                        <% if(launches[i].links.video_link){ %>
+                            <div class="launch-links" onclick="location.href='<%= launches[i].links.video_link %> ';">Video</div>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>

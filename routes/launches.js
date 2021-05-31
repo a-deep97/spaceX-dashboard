@@ -11,7 +11,7 @@ let launches;
 /*----------------routes---------------------*/
 router.get('/',(req,res)=>{
     launches=fetchedData.getLaunches();
-    res.send('welcome to launches');
+    res.render('launches',{launches});
 });
 
 
