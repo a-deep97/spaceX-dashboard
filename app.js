@@ -5,17 +5,21 @@ const app=express();
 const http=require('http').Server(app);
 const bodyParser=require('body-parser');
 
+/*----------------require util libs---------------------*/
+const fetchApi=require('./utils/fetch_api');
+
 /*----------------setup properties---------------------*/
+require('dotenv').config();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.set('view engine','ejs');
 
-
-
+/*----------------api fetch---------------------*/
 
 /*----------------routes---------------------*/
-app.get('/',(req,res)=>{
-
+app.get('/',async (req,res)=>{
+    const data=await fetchApi.requestLaunches();
+    res.send(data);
 });
 
 
