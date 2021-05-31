@@ -23,7 +23,43 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    animation-name: main-bg-animate;
+    animation-direction: alternate;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
 }
+/* main background animation */
+@keyframes main-bg-animate{
+    0%{
+        background: url('../media/launch_background1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    35%{
+        background: url('../media/launch_background2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    70%{
+        background: url('../media/launch_background3.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background: url('../media/launch_background4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 #section2{
     display: flex;
     justify-content: center;
@@ -35,6 +71,7 @@ header{
     background-size: cover;
     background-repeat: repeat-y;
 }
+
 #launches-container{
     display: flex;
     justify-content: flex-start;
@@ -52,6 +89,7 @@ header{
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     font-family: var(--font1);
+    box-shadow: 0px 0px 10px white;
 }
 .about-launch{
     display: flex;
