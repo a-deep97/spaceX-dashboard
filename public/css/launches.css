@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+:root{
+
+    --font1: 'Quantico', sans-serif;
+    --font2: 'VT323', monospace;
+    --font3: 'Audiowide', cursive;
+}
+
+html ,body{
+    margin: 0px;
+}
+header{
+    height: 0px;
+}
+#section1{
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+#section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+#launches-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.launch-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    margin: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: var(--font1);
+}
+.about-launch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0px;
+}
+.about-mission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+}
+.mission-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin: 20px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--font3);
+    padding: 20px;
+    text-shadow: 0px 0px 10px cyan;
+}
+.launch-date-time{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+}
+.launch-location{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 10px 0px;
+}
+.mission-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 10px 0px;
+}
+#mission-success{
+    text-shadow: 0px 0px 20px green;
+}
+#mission-failed{
+    text-shadow: 0px 0px 20px red;
+}
+.about-rocket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
+.rocket-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin: 10px 0px;
+    font-family: var(--font2);
+    text-shadow: 0px 0px 8px white;
+}
+.rocket-type{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+}
+.rocket-reused{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 10px 0px;
+}
+.rocket-landed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 10px 0px;
+}
+
+.launch-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 5px;
+    font-size: 1.5rem;
+    margin: 20px 0px;
+    text-align: center;
+    text-shadow: 0px 0px 20px black;
+}
+.launch-externals{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    margin: 10px 0px;
+}
+.launch-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 80%;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+    padding: 5px 0px; 
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px white;
+}
+.launch-links:hover{
+    box-shadow: 0px 0px 10px cyan;
+    text-shadow: 0px 0px 5px cyan;
+}
+footer{
+    height: 0px;
+}

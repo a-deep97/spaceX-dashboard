@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/launches.css">
     <title>spaceX launches</title>
 </head>
 <body>
@@ -18,14 +19,12 @@
                             <div class="mission-name"><%= launches[i].mission_name %></div>
                             <div class="launch-date-time"><%= launches[i].launch_date_utc %></div>
                             <div class="launch-location"><%= launches[i].launch_site.site_name_long %></div>
-                            <div class="mission-status">
-                                <% if(launches[i].launch_success){ %>
-                                    Mission succeeded 
-                                <% } %>
-                                <% if(launches[i].launch_failure_details){ %>
-                                    Failed( <%=  launches[i].launch_failure_details.reason %>) 
-                                <% } %>    
-                            </div>
+                            <% if(launches[i].launch_success){ %>
+                                <div class="mission-status" id="mission-success">Mission succeeded</div> 
+                            <% } %>
+                            <% if(launches[i].launch_failure_details){ %>
+                                <div class="mission-status" id="mission-failed">Failed( <%=  launches[i].launch_failure_details.reason %>)</div> 
+                            <% } %>    
                         </div>
                         <div class="about-rocket">
                             <div class="rocket-name"><%= launches[i].rocket.rocket_name %> </div>
