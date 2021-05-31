@@ -18,7 +18,11 @@ header{
 #section1{
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 500px;
+    background: url('../media/launch_background4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #section2{
     display: flex;
@@ -26,6 +30,10 @@ header{
     align-items: center;
     width: 100%;
     background-color: black;
+    background: url('../media/space_background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 #launches-container{
     display: flex;
