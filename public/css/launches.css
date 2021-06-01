@@ -21,7 +21,7 @@ header{
     align-items: flex-end;
     flex-direction: column;
     width: 100%;
-    height: 500px;
+    height: 80vh;
     background: url('../media/launch_background4.jpg');
     background-position: center;
     background-repeat: no-repeat;
