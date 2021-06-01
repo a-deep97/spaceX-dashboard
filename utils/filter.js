@@ -1,6 +1,6 @@
 
 /*----------------require util libs---------------------*/
-const fetchedData=require('./utils/fetched_data');
+const fetchedData=require('./fetched_data');
 
 
 
