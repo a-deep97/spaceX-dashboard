@@ -11,6 +11,8 @@ const fetchedData=require('./utils/fetched_data');
 
 /*----------------require routes---------------------*/
 const launchesRoute=require('./routes/launches');
+const rocketsRoute=require('./routes/rockets');
+
 /*----------------setup properties---------------------*/
 require('dotenv').config();
 app.use(bodyParser.urlencoded({extended:true}));
@@ -27,7 +29,7 @@ app.get('/',async (req,res)=>{
     }
 });
 app.use('/launches',launchesRoute);
-
+app.use('/rockets',rocketsRoute);
 
 
 /*-----------server listening to specified port--------------------*/
