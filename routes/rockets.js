@@ -17,7 +17,8 @@ const fetchApi=require('../utils/fetch_api');
 router.get('/',async (req,res)=>{
 
     fetchedData.setRockets( await fetchApi.requestRockets());
-    res.send(fetchedData.getRockets());
+    const rockets=fetchedData.getRockets();
+    res.render('rockets',{rockets});
 });
 
 /*----------------module exports---------------------*/

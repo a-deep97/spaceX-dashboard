@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>spaceX rockets</title>
+</head>
+<body>
+    <header></header>
+    <section id="section1"></section>
+    <section id="section2">
+        <div id="rockets-container">
+            <% for(var i=0;i<rockets.length;i++){ %>
+                <div class="rocket-container">
+                    <div class="rocket-content">
+                        <div class="about-rocket">
+                            <div class="rocket-info">
+                                <div class="rocket-name"><%= rockets[i].rocket_name %> </div>
+                            </div>
+                            <div class="rocket-info">
+                                <div class="rocket-first-flight">First flight <%= rockets[i].first_flight %> </div>
+                                <div class="rocket-active-status">
+                                    <% if(rockets[i].active){ %>
+                                        Active
+                                    <% }else{ %>
+                                        Not active
+                                    <% } %>   
+                                </div>
+                            </div>
+                            <div class="rocket-info">
+                                <div class="rockets-stages"><%= rockets[i].stages %> stages</div>
+                                <div class="rocket-boosters"><%= rockets[i].boosters %> boosters</div>
+                                <div class="rocket-launch-cost"><%= rockets[i].cost_per_launch %> $ per launch </div>
+                                <div class="rocket-success-rate"><%= rockets[i].success_rate_pct %> % succcess rate</div>
+                            </div>
+                            <div class="rocket-info">
+                                <div class="rocket-height">Height: <%= rockets[i].height.meters %> m </div>
+                                <div class="rocket-diameter">Diameter: <%= rockets[i].diameter.meters %> m </div>
+                                <div class="rocket-weight">Weight: <%= rockets[i].mass.kg %> kg </div>
+                            </div>
+                            <div class="rocket-info"></div>
+                            <div class="rocket-info"></div>
+                        </div>
+                        <div class="rocket-desc">rockets[i].description</div>
+                        <div class="rocket-externals">
+                            <div class="rocket-links" onclick="location.href='<%= rockets[i].wikipedia %> ';">Wikipedia</div>
+                            <div class="rocket-links"></div>
+                        </div>
+                    </div>
+                    <div class="rocket-image"></div>
+                </div>
+            <% } %>  
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
