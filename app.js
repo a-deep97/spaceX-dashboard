@@ -6,8 +6,7 @@ const http=require('http').Server(app);
 const bodyParser=require('body-parser');
 
 /*----------------require util libs---------------------*/
-const fetchApi=require('./utils/fetch_api');
-const fetchedData=require('./utils/fetched_data');
+
 
 /*----------------require routes---------------------*/
 const launchesRoute=require('./routes/launches');
@@ -22,11 +21,8 @@ app.set('view engine','ejs');
 
 /*----------------routes---------------------*/
 app.get('/',async (req,res)=>{
-    const data=await fetchApi.requestLaunches();
-    fetchedData.setLaunches(data);
-    if(data!=null){
-        res.redirect('/launches');
-    }
+    
+    res.redirect('/launches');
 });
 app.use('/launches',launchesRoute);
 app.use('/rockets',rocketsRoute);

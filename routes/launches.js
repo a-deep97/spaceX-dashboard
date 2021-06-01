@@ -8,14 +8,14 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 /*----------------require util libs---------------------*/
 const fetchedData=require('../utils/fetched_data');
+const fetchApi=require('../utils/fetch_api');
 const filterData=require('../utils/filter');
 
-/*----------------global variables---------------------*/
-let launches;
-/*----------------routes---------------------*/
-router.get('/',(req,res)=>{
 
-    launches=fetchedData.getLaunches();
+/*----------------routes---------------------*/
+router.get('/',async(req,res)=>{
+
+    fetchedData.setLaunches(await fetchApi.requestLaunches());
     launches=filterData.getFiltered(req.query.mission,req.query.rocket,req.query.year);
     res.render('launches',{launches});
 });
