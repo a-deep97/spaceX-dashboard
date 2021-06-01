@@ -7,8 +7,8 @@ const router = express.Router();
 router.use(bodyParser.urlencoded({ extended: true }));
 
 /*----------------require util libs---------------------*/
-const fetchedData=require('../utils/fetched_data');
-const fetchApi=require('../utils/fetch_api');
+const fetchedData=require('./utils/fetched_data');
+const fetchApi=require('./utils/fetch_api');
 
 /*----------------global variables---------------------*/
 
