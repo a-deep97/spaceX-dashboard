@@ -8,14 +8,16 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 /*----------------require util libs---------------------*/
 const fetchedData=require('../utils/fetched_data');
+const fetchApi=require('../utils/fetch_api');
 
 /*----------------global variables---------------------*/
 
 
 /*----------------routes---------------------*/
-router.get('/',(req,res)=>{
+router.get('/',async (req,res)=>{
 
-    res.send('welcome to rockets');
+    fetchedData.setRockets( await fetchApi.requestRockets());
+    res.send(fetchedData.getRockets());
 });
 
 /*----------------module exports---------------------*/
