@@ -9,7 +9,9 @@
 </head>
 <body>
     <header></header>
-    <section id="section1"></section>
+    <section id="section1">
+        <%- include('_navbar.ejs') %>
+    </section>
     <section id="section2">
         <div id="rockets-container">
             <% for(var i=0;i<rockets.length;i++){ %>
