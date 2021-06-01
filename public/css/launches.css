@@ -150,7 +150,6 @@ header{
     background-color: black;
     background: url('../media/space_background.jpg');
     background-position: center;
-    background-size: cover;
     background-repeat: repeat-y;
 }
 
@@ -170,7 +169,7 @@ header{
     width: 95%;
     margin: 10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
     font-family: var(--font1);
     box-shadow: 0px 0px 20px white;
 }
@@ -217,12 +216,19 @@ header{
     align-items: center;
     font-size: 1rem;
 }
+.launch-date-time:hover{
+    text-shadow: 0px 0px 10px white;
+}
+
 .launch-location{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     font-size: 1.5rem;
     margin: 10px 0px;
+}
+.launch-location:hover{
+    text-shadow: 0px 0px 10px white;
 }
 .mission-status{
     display: flex;
@@ -261,6 +267,9 @@ header{
     align-items: center;
     font-size: 1rem;
 }
+.rocket-type:hover{
+    text-shadow: 0px 0px 10px white;
+}
 .rocket-reused{
     display: flex;
     justify-content: center;
@@ -268,12 +277,18 @@ header{
     font-size: 1rem;
     margin: 10px 0px;
 }
+.rocket-reused:hover{
+    text-shadow: 0px 0px 10px white;
+}
 .rocket-landed{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     margin: 10px 0px;
+}
+.rocket-landed:hover{
+    text-shadow: 0px 0px 10px white;
 }
 
 .launch-details{
@@ -286,6 +301,9 @@ header{
     margin: 20px 0px;
     text-align: center;
     text-shadow: 0px 0px 20px black;
+}
+.launch-details:hover{
+    text-shadow: 0px 0px 10px white;
 }
 .launch-externals{
     display: flex;
