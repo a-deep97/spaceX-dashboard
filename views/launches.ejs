@@ -67,13 +67,13 @@
                     <% } %>  
                     <div class="launch-externals">
                         <% if(launches[i].links.article_link){ %>
-                            <div class="launch-links" onclick="location.href='<%= launches[i].links.article_link %> ';">Article</div>
+                            <div class="launch-links" onclick="window.open('<%= launches[i].links.article_link %>');">Article</div>
                         <% } %>  
                         <% if(launches[i].links.wikipedia){ %>
-                            <div class="launch-links" onclick="location.href='<%= launches[i].links.wikipedia %> ';">Wikipedia</div>
+                            <div class="launch-links" onclick="window.open('<%= launches[i].links.wikipedia %>');">Wikipedia</div>
                         <% } %>
                         <% if(launches[i].links.video_link){ %>
-                            <div class="launch-links" onclick="location.href='<%= launches[i].links.video_link %> ';">Video</div>
+                            <div class="launch-links" onclick="window.open('<%= launches[i].links.video_link %>');">Video</div>
                         <% } %>
                     </div>
                 </div>
