@@ -4,7 +4,8 @@
         <img src="./media/spacex-logo.png" alt="">
     </div>
     <div id="nav-links">
-
+        <div class="nav-link" onclick="location.href='/launches';">Launches</div>
+        <div class="nav-link" onclick="location.href='/rockets';">Rockets</div>
     </div>
 </nav>
 
@@ -27,5 +28,28 @@
     #title img{
         max-width: 100%;
         max-height: 100%;
+    }
+    #nav-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 20px;
+        height: 95%;
+    }
+    .nav-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0px 10px ;
+        padding: 0px 10px;
+        font-size: 1.8rem;
+        font-family: var(--font3);
+        color: white;
+        text-shadow: 0px 0px 10px white;
+        cursor: pointer;
+    }
+    .nav-link:hover{
+        text-shadow: 0px 0px 10px cyan;
     }
 </style>
