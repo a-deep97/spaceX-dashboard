@@ -12,7 +12,7 @@
     <section id="section1">
         <div id="filter-form-container">
             <div id="filter-form-heading">Search</div>
-            <form action="" method="post" id="filter-form">
+            <form action="/launches" method="post" id="filter-form">
                 <div class="input-container">
                     <div class="form-label">Mission</div>
                     <input type="text" class="form-input" name="mission"  placeholder="Any specific mission...">
@@ -31,6 +31,11 @@
     </section>
     <section id="section2">
         <div id="launches-container">
+            <% if(launches.length==0){ %>
+                <div class="launch-container">
+                    <div id="empty-container">No launch found !</div>
+                </div>
+            <% } %>  
             <% for(var i=0;i<launches.length;i++){ %>
                 <div class="launch-container">
                     <div class="about-launch">

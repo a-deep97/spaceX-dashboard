@@ -159,6 +159,7 @@ header{
     align-items: center;
     flex-direction: column;
     margin: 20px;
+    width: 95%;
 }
 .launch-container{
     display: flex;
@@ -171,6 +172,17 @@ header{
     background-color: rgba(0, 0, 0, 0.2);
     font-family: var(--font1);
     box-shadow: 0px 0px 20px white;
+}
+#empty-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font3);
+    margin: 20px 0px;
+    padding: 20px;
+    text-shadow: 0px 0px 10px cyan;
 }
 .about-launch{
     display: flex;
