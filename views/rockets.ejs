@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/rockets.css">
     <title>spaceX rockets</title>
 </head>
 <body>
@@ -19,36 +20,33 @@
                                 <div class="rocket-name"><%= rockets[i].rocket_name %> </div>
                             </div>
                             <div class="rocket-info">
-                                <div class="rocket-first-flight">First flight <%= rockets[i].first_flight %> </div>
-                                <div class="rocket-active-status">
-                                    <% if(rockets[i].active){ %>
-                                        Active
-                                    <% }else{ %>
-                                        Not active
-                                    <% } %>   
-                                </div>
+                                <div class="rocket-first-flight info-content">First flight:  <%= rockets[i].first_flight %> </div>
+                                <% if(rockets[i].active){ %>
+                                    <div class="rocket-status-active info-content">Active</div>
+                                <% }else{ %>
+                                    <div class="rocket-status-notactive info-content">Not active</div>
+                                <% } %>   
                             </div>
                             <div class="rocket-info">
-                                <div class="rockets-stages"><%= rockets[i].stages %> stages</div>
-                                <div class="rocket-boosters"><%= rockets[i].boosters %> boosters</div>
-                                <div class="rocket-launch-cost"><%= rockets[i].cost_per_launch %> $ per launch </div>
-                                <div class="rocket-success-rate"><%= rockets[i].success_rate_pct %> % succcess rate</div>
+                                <div class="rockets-stages info-content"><%= rockets[i].stages %> stages</div>
+                                <div class="rocket-boosters info-content"><%= rockets[i].boosters %> boosters</div>
+                                <div class="rocket-launch-cost info-content"><%= rockets[i].cost_per_launch %> $ per launch </div>
+                                <div class="rocket-success-rate info-content"><%= rockets[i].success_rate_pct %> % succcess rate</div>
                             </div>
                             <div class="rocket-info">
-                                <div class="rocket-height">Height: <%= rockets[i].height.meters %> m </div>
-                                <div class="rocket-diameter">Diameter: <%= rockets[i].diameter.meters %> m </div>
-                                <div class="rocket-weight">Weight: <%= rockets[i].mass.kg %> kg </div>
+                                <div class="rocket-height info-content">Height: <%= rockets[i].height.meters %> m </div>
+                                <div class="rocket-diameter info-content">Diameter: <%= rockets[i].diameter.meters %> m </div>
+                                <div class="rocket-weight info-content">Weight: <%= rockets[i].mass.kg %> kg </div>
                             </div>
-                            <div class="rocket-info"></div>
-                            <div class="rocket-info"></div>
                         </div>
-                        <div class="rocket-desc">rockets[i].description</div>
+                        <div class="rocket-desc"><%= rockets[i].description %></div>
                         <div class="rocket-externals">
                             <div class="rocket-links" onclick="location.href='<%= rockets[i].wikipedia %> ';">Wikipedia</div>
-                            <div class="rocket-links"></div>
                         </div>
                     </div>
-                    <div class="rocket-image"></div>
+                    <div class="rocket-image">
+                        <img src="" alt="">
+                    </div>
                 </div>
             <% } %>  
         </div>
