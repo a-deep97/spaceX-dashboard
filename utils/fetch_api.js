@@ -10,7 +10,7 @@ async function requestLaunches(){
         method: "GET",
         redirect: "follow"       
     };
-    await fetch(process.env.API_LAUNCHES_LINK,requestOptions)
+    await fetch("https://api.spacexdata.com/v3/launches",requestOptions)
         .then(res=>res.json())
         .then(data=>result=data)
         .catch(error=>console.log(error));
@@ -24,7 +24,7 @@ async function requestRockets(){
         method: 'GET',
         redirect: 'follow'
     };
-    await fetch(process.env.API_ROCKETS_LINK,requestOptions)
+    await fetch("https://api.spacexdata.com/v3/rockets",requestOptions)
         .then(res=>res.json())
         .then(data=>result=data)
         .catch(error=>console.log(error));
